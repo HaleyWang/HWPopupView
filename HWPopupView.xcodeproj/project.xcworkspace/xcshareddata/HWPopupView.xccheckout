@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AD742740-58C6-4C86-B741-47F5CC94DAA8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HWPopupView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</key>
+		<string>https://github.com/HaleyWang/HWPopupView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HWPopupView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/HaleyWang/HWPopupView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HWPopupView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
