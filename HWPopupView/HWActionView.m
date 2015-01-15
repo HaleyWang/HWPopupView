@@ -51,30 +51,26 @@
 
     HWAlertMenu *menu = self.menus.lastObject;
     if (!CGRectContainsPoint(menu.frame, touchPoint)) {
-        [[HWActionView sharedActionView] dismissMenu:menu Animated:YES];
+        [[HWActionView sharedActionView] dismissView:menu Animated:YES];
         [self.menus removeObject:menu];
     }
 }
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    if ([gestureRecognizer isEqual:self.tapGesture]) {
-        CGPoint p = [gestureRecognizer locationInView:self];
-        HWAlertMenu *topMenu = self.menus.lastObject;
-        if (CGRectContainsPoint(topMenu.frame, p)) {
-            return NO;
-        }
-    }
-    return YES;
-}
+
 
 #pragma mark -
 
-- (void)setMenu:(UIView *)menu animation:(BOOL)animated{
+- (HWAlertMenu *)showView:(UIView *)view animation:(BOOL)animated{
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     if (![self superview]) {
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+
         //self.backgroundColor = [UIColor clearColor];
         [window addSubview:self];
     }
+    
+    view.frame = CGRectMake(0, 0, window.bounds.size.width, window.bounds.size.height);
+    
+    UIView * menu = [[HWAlertMenu alloc] initWithAlertView:view andMainView: nil andHeight: 275 ];
     
     HWAlertMenu *topMenu = (HWAlertMenu *)menu;
     
@@ -97,25 +93,28 @@
         [topMenu.layer addAnimation:self.showMenuAnimation forKey:@"showMenu"];
         [CATransaction commit];
     }
+    return menu;
 }
 
-- (void)dismissMenu:(HWAlertMenu *)menu Animated:(BOOL)animated
+- (void)dismissView:(HWAlertMenu *)menu Animated:(BOOL)animated
 {
     if ([self superview]) {
         [self.menus removeObject:menu];
         if (animated && self.menus.count == 0) {
             [CATransaction begin];
-            [CATransaction setAnimationDuration:0.2];
+            [CATransaction setAnimationDuration:0.3];
             [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
             [CATransaction setCompletionBlock:^{
                 [self removeFromSuperview];
                 [menu removeFromSuperview];
             }];
-            [self.layer addAnimation:self.lightingAnimation forKey:@"lighting"];
+            //[self.layer addAnimation:self.lightingAnimation forKey:@"lighting"];
             [menu.layer addAnimation:self.dismissMenuAnimation forKey:@"dismissMenu"];
             [CATransaction commit];
         }else{
+            
             [menu removeFromSuperview];
+            [menu.layer removeFromSuperlayer];
 
             HWAlertMenu *topMenu = self.menus.lastObject;
  

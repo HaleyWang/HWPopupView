@@ -34,38 +34,28 @@
 }
 - (IBAction)onclickPopupBtn:(id)sender {
     
-    //if(self.sgAlertShareView == nil) {
+
     
-        BBJShareAlertView * shareAlertView = [BBJShareAlertView initWithTitle:@"aa" andProfielPublicOption:YES andReferView:nil];
+    BBJShareAlertView * shareAlertView = [BBJShareAlertView initWithTitle:@"aa" andProfielPublicOption:YES andReferView:nil];
         
-        shareAlertView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-        
-        
-        self.sgAlertShareView = [[HWAlertMenu alloc] initWithAlertView:shareAlertView andMainView: nil andHeight: 275 ];
-        self.sgAlertShareView.cancelBtn = shareAlertView.cancelBtn;
-        
-        
-        NSString * titleStr = [NSString stringWithFormat:shareAlertView.bbjtitleLabel.text, @"jim"];
-        
-        shareAlertView.bbjtitleLabel.text = titleStr;
-        //[shareAlertView.bbjtitleLabel setFont:FontFZYXJ(14)];
-        [shareAlertView.bbjtitleLabel setFont:[UIFont systemFontOfSize:14]];
-        [shareAlertView.bbjsubTitleLabel setFont:[UIFont systemFontOfSize:14]];
-        [shareAlertView.bbjitemTitleLabel setFont:[UIFont systemFontOfSize:14]];
-        
-        [shareAlertView.bbjswitchView addTarget:self action:@selector(onProfilePublicValueChange:) forControlEvents:UIControlEventValueChanged];
-        
-        [shareAlertView.cancelBtn addTarget:self action:@selector(onCancelShareAlertView:) forControlEvents:UIControlEventTouchUpInside];
 
-    //}
+        
 
-
-    [[HWActionView sharedActionView] setMenu:self.sgAlertShareView animation:YES];
+    self.sgAlertShareView = [[HWActionView sharedActionView] showView:shareAlertView animation:YES];
+    
+    
+    [shareAlertView.bbjswitchView addTarget:self action:@selector(onProfilePublicValueChange:) forControlEvents:UIControlEventValueChanged];
+    
+    [shareAlertView.cancelBtn addTarget:self action:@selector(onCancelAlertView:) forControlEvents:UIControlEventTouchUpInside];
+    [shareAlertView.doneBtn addTarget:self action:@selector(onDoneAlertView:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
-- (IBAction)onCancelShareAlertView:(UISwitch *)sender {
-    [[HWActionView sharedActionView] dismissMenu:self.sgAlertShareView Animated:YES];
+- (IBAction)onDoneAlertView:(UISwitch *)sender {
+    [[HWActionView sharedActionView] dismissView:self.sgAlertShareView Animated:YES];
+}
+- (IBAction)onCancelAlertView:(UISwitch *)sender {
+    [[HWActionView sharedActionView] dismissView:self.sgAlertShareView Animated:YES];
 }
 
 
@@ -73,8 +63,9 @@
     
     if([sender isOn]) {
         
-        [[HWActionView sharedActionView] dismissMenu:self.sgAlertShareView Animated:YES];
+        //[[HWActionView sharedActionView] dismissView:self.sgAlertShareView Animated:YES];
         //todo
+        NSLog(@"====== onProfilePublicValueChange");
         
     }
 }

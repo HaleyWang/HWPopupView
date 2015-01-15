@@ -14,10 +14,10 @@
 + (HWActionView *)sharedActionView;
 
 //显示
-- (void)setMenu:(UIView *)menu animation:(BOOL)animated;
+- (HWAlertMenu *) showView:(UIView *)menu animation:(BOOL)animated;
 
 //移除
-- (void)dismissMenu:(HWAlertMenu *)menu Animated:(BOOL)animated;
+- (void)dismissView:(HWAlertMenu *)menu Animated:(BOOL)animated;
 
 
 @end

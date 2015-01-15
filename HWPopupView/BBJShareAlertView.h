@@ -13,6 +13,7 @@
 @interface BBJShareAlertView : UIView
 
 @property (strong, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (strong, nonatomic) IBOutlet UIButton *doneBtn;
 
 @property (strong, nonatomic) IBOutlet UILabel *bbjtitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bbjsubTitleLabel;

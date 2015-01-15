@@ -10,29 +10,29 @@
 	<string>HWPopupView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</key>
+		<key>4BBA34D56748C15D85BE857E9B92F01BDAB26163</key>
 		<string>https://github.com/HaleyWang/HWPopupView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HWPopupView.xcodeproj/project.xcworkspace</string>
+	<string>HWPopupView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</key>
+		<key>4BBA34D56748C15D85BE857E9B92F01BDAB26163</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/HaleyWang/HWPopupView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</string>
+	<string>4BBA34D56748C15D85BE857E9B92F01BDAB26163</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B9D713D6-1585-46D4-A1C3-54EF12F9D0DF</string>
+			<string>4BBA34D56748C15D85BE857E9B92F01BDAB26163</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HWPopupView</string>
 		</dict>
