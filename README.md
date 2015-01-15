@@ -1,7 +1,7 @@
 HWPopupView
 ===========
 
-IOS custom Popup view,Popup View,Popup Window
+IOS custom Popup view,Popup Window
 
 ===========
 
