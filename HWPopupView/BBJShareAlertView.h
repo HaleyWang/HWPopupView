@@ -31,7 +31,7 @@
 @property (nonatomic, getter = isShowing) BOOL show;
 
 
-+ (id)initWithTitle:(NSString *)title andProfielPublicOption:(BOOL )option andReferView:(UIView *)referView;
++ (id)initWithTitle:(NSString *)title andReferView:(UIView *)referView;
 
 
 

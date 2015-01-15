@@ -12,7 +12,7 @@
 @implementation BBJShareAlertView
 
 
-+ (id)initWithTitle:(NSString *)title andProfielPublicOption:(BOOL )isPriveta andReferView:(UIView *)referView {
++ (id)initWithTitle:(NSString *)title andReferView:(UIView *)referView {
     
     
     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"BBJShareAlertView" owner:nil options:nil];

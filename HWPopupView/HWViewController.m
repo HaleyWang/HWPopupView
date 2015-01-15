@@ -19,7 +19,7 @@
 
 
 //弹出层
-@property (nonatomic, strong) HWAlertMenu * sgAlertShareView;
+@property (nonatomic, strong) HWAlertMenu * sgAlertView;
 
 @end
 
@@ -36,10 +36,10 @@
     
 
     //custom view
-    BBJShareAlertView * shareAlertView = [BBJShareAlertView initWithTitle:@"aa" andProfielPublicOption:YES andReferView:nil];
+    BBJShareAlertView * shareAlertView = [BBJShareAlertView initWithTitle:@"aa" andReferView:nil];
         
     //Popup custom view
-    self.sgAlertShareView = [[HWActionView sharedActionView] showView:shareAlertView animation:YES];
+    self.sgAlertView = [[HWActionView sharedActionView] showView:shareAlertView animation:YES];
     
     
     [shareAlertView.bbjswitchView addTarget:self action:@selector(onProfilePublicValueChange:) forControlEvents:UIControlEventValueChanged];
@@ -50,10 +50,10 @@
 }
 
 - (IBAction)onDoneAlertView:(UISwitch *)sender {
-    [[HWActionView sharedActionView] dismissView:self.sgAlertShareView Animated:YES];
+    [[HWActionView sharedActionView] dismissView:self.sgAlertView Animated:YES];
 }
 - (IBAction)onCancelAlertView:(UISwitch *)sender {
-    [[HWActionView sharedActionView] dismissView:self.sgAlertShareView Animated:YES];
+    [[HWActionView sharedActionView] dismissView:self.sgAlertView Animated:YES];
 }
 
 
